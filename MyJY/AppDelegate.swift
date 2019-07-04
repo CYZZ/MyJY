@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +21,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window?.rootViewController = MainTabBarViewController()
 		window?.backgroundColor = .white
 		window?.makeKeyAndVisible()
+		
+		requetAuthorization()
 		return true
 	}
+	
+	/// 开启通知权限，iOS10及以上
+	func requetAuthorization() {
+		if #available(iOS 10.0, *) {
+			let center = UNUserNotificationCenter.current()
+			
+			center.requestAuthorization(options: [.badge,.sound,.alert]) { (granted, error) in
+				if granted {
+					print("开启通知成功！")
+				}
+			}
+		} else {
+			// Fallback on earlier versions
+			UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge,.sound,.alert], categories: nil))
+		}
+		
+	}
+	
 
 	func applicationWillResignActive(_ application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

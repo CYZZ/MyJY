@@ -44,8 +44,10 @@ class MyWebViewController: UIViewController {
 	
 	/// 初始化导航栏
 	private func setupNav() -> Void {
-		self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .camera, target: self, action: #selector(rightItemClick))
-//		self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(leftItemClick))
+		let itemR1 = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(rightItemClick2))
+		let itemR2 = UIBarButtonItem.init(barButtonSystemItem: .camera, target: self, action: #selector(rightItemClick))
+		self.navigationItem.rightBarButtonItems = [itemR1,itemR2]
+		
 		let item1 = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(leftItemClick))
 		let item2 = UIBarButtonItem.init(title: "拷贝链接", style: .plain, target: self, action: #selector(copyUrlClick))
 		self.navigationItem.leftBarButtonItems = [item1,item2]
@@ -61,6 +63,13 @@ class MyWebViewController: UIViewController {
 		}
 		self.navigationController?.pushViewController(secondVC, animated: true)
 	}
+	
+	@objc func rightItemClick2() -> Void {
+		print("点击了右边的通知页面")
+		let apnVC = MyAPNViewController()
+		self.navigationController?.pushViewController(apnVC, animated: true)
+	}
+	
 	
 	@objc func leftItemClick() -> Void {
 		print("点击了左边的导航按钮")

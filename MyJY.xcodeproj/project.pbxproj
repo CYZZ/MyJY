@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0F07EF22CDC9DA00D019DD /* MyAPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0F07EE22CDC9DA00D019DD /* MyAPN.swift */; };
+		5F0F07F322CDE21600D019DD /* MyAPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0F07F122CDE21600D019DD /* MyAPNViewController.swift */; };
+		5F0F07F422CDE21600D019DD /* MyAPNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0F07F222CDE21600D019DD /* MyAPNViewController.xib */; };
 		5F16728922CC5A2900E01332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F16728822CC5A2900E01332 /* AppDelegate.swift */; };
 		5F16728B22CC5A2900E01332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F16728A22CC5A2900E01332 /* ViewController.swift */; };
 		5F16728E22CC5A2900E01332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F16728C22CC5A2900E01332 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F0F07EE22CDC9DA00D019DD /* MyAPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPN.swift; sourceTree = "<group>"; };
+		5F0F07F122CDE21600D019DD /* MyAPNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPNViewController.swift; sourceTree = "<group>"; };
+		5F0F07F222CDE21600D019DD /* MyAPNViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAPNViewController.xib; sourceTree = "<group>"; };
 		5F16728522CC5A2900E01332 /* MyJY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyJY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F16728822CC5A2900E01332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F16728A22CC5A2900E01332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F0F07ED22CDC9B800D019DD /* APN */ = {
+			isa = PBXGroup;
+			children = (
+				5F0F07F022CDE1FB00D019DD /* Controller */,
+				5F0F07EE22CDC9DA00D019DD /* MyAPN.swift */,
+			);
+			path = APN;
+			sourceTree = "<group>";
+		};
+		5F0F07F022CDE1FB00D019DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F0F07F122CDE21600D019DD /* MyAPNViewController.swift */,
+				5F0F07F222CDE21600D019DD /* MyAPNViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5F16727C22CC5A2900E01332 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +104,7 @@
 		5F16729A22CC5A6000E01332 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				5F0F07ED22CDC9B800D019DD /* APN */,
 				5F16729B22CC5A6D00E01332 /* Main */,
 				5F1672A322CC7C7000E01332 /* Web */,
 			);
@@ -189,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F16729322CC5A2A00E01332 /* LaunchScreen.storyboard in Resources */,
+				5F0F07F422CDE21600D019DD /* MyAPNViewController.xib in Resources */,
 				5F16729022CC5A2A00E01332 /* Assets.xcassets in Resources */,
 				5F16728E22CC5A2900E01332 /* Main.storyboard in Resources */,
 				5F1672B122CC83C200E01332 /* SeconViewController.xib in Resources */,
@@ -204,7 +230,9 @@
 			files = (
 				5F16729D22CC5A8E00E01332 /* MainTabBarViewController.swift in Sources */,
 				5F1672B022CC83C200E01332 /* SeconViewController.swift in Sources */,
+				5F0F07F322CDE21600D019DD /* MyAPNViewController.swift in Sources */,
 				5F1672AD22CC7CBC00E01332 /* MyWebView.swift in Sources */,
+				5F0F07EF22CDC9DA00D019DD /* MyAPN.swift in Sources */,
 				5F1672AB22CC7CA800E01332 /* MyWebViewController.swift in Sources */,
 				5F16728B22CC5A2900E01332 /* ViewController.swift in Sources */,
 				5F16728922CC5A2900E01332 /* AppDelegate.swift in Sources */,
