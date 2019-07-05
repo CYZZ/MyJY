@@ -67,7 +67,7 @@ class MyWebView: UIView {
 			if isHiden {
 				self.webView.scrollView.contentInset = UIEdgeInsets.zero
 			} else {
-				self.webView.scrollView.contentInset = UIEdgeInsets(top: 20 + Nav.navigationBar.frame.height, left: 0, bottom: tabBarController.tabBar.frame.height, right: 0)
+				self.webView.scrollView.contentInset = UIEdgeInsets(top: Nav.navigationBar.frame.maxY, left: 0, bottom: tabBarController.tabBar.frame.height, right: 0)
 			}
 		}) { (comple) in
 			
