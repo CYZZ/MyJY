@@ -55,6 +55,24 @@ class MyWebView: UIView {
 		
 		self.addSubview(self.webView)
 		self.setupView()
+		NotificationCenter.default.addObserver(self, selector: #selector(tabBarHidenOrShow(_:)), name: NSNotification.Name(rawValue: "hidenTabBarAndNav"), object: nil)
+	}
+	
+	@objc func tabBarHidenOrShow(_ notification:Notification) {
+		let isHiden = notification.userInfo?["isHiden"] as! Bool
+		let tabBarController = UIApplication.shared.keyWindow?.rootViewController as! MainTabBarViewController
+		let Nav = tabBarController.selectedViewController as! MyNavController
+		
+		UIView.animate(withDuration: 0.3, animations: {
+			if isHiden {
+				self.webView.scrollView.contentInset = UIEdgeInsets.zero
+			} else {
+				self.webView.scrollView.contentInset = UIEdgeInsets(top: 20 + Nav.navigationBar.frame.height, left: 0, bottom: tabBarController.tabBar.frame.height, right: 0)
+			}
+		}) { (comple) in
+			
+		}
+		
 	}
 	
 	/// 初始化悬浮球
@@ -107,7 +125,7 @@ class MyWebView: UIView {
 			UIView.animate(withDuration: 0.25, animations: {
 				self.contenView.center = newCenter
 			}, completion: nil)
-			
+			self.showNavAndTabBar()
 		} else {
 			print("pan State = \(p.state)")
 		}
@@ -129,6 +147,12 @@ class MyWebView: UIView {
 			self.webView.goForward()
 		}
 	}
+	/// 显示导航栏和tabBar
+	private func showNavAndTabBar() -> Void {
+		let tabBarController = UIApplication.shared.keyWindow?.rootViewController as! MainTabBarViewController
+		tabBarController.hidenTabBarAndNav(false)
+	}
+	
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
@@ -138,6 +162,10 @@ class MyWebView: UIView {
 		super.layoutSubviews()
 		self.webView.frame = self.frame
 		self.contenView.center = CGPoint(x: 50, y: self.frame.height * 0.5)
+	}
+	
+	deinit {
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 }

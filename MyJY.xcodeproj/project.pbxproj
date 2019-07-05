@@ -21,6 +21,7 @@
 		5F1672AD22CC7CBC00E01332 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1672AC22CC7CBC00E01332 /* MyWebView.swift */; };
 		5F1672B022CC83C200E01332 /* SeconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1672AE22CC83C200E01332 /* SeconViewController.swift */; };
 		5F1672B122CC83C200E01332 /* SeconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F1672AF22CC83C200E01332 /* SeconViewController.xib */; };
+		5F20269B22CEE028002E442B /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F20269A22CEE028002E442B /* MyTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5F1672AC22CC7CBC00E01332 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		5F1672AE22CC83C200E01332 /* SeconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeconViewController.swift; sourceTree = "<group>"; };
 		5F1672AF22CC83C200E01332 /* SeconViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeconViewController.xib; sourceTree = "<group>"; };
+		5F20269A22CEE028002E442B /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				5F16729C22CC5A8E00E01332 /* MainTabBarViewController.swift */,
 				5F16729E22CC5AA800E01332 /* MyNavController.swift */,
+				5F20269922CEE01A002E442B /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -153,6 +156,14 @@
 				5F1672AF22CC83C200E01332 /* SeconViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F20269922CEE01A002E442B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F20269A22CEE028002E442B /* MyTabBar.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 				5F16729D22CC5A8E00E01332 /* MainTabBarViewController.swift in Sources */,
 				5F1672B022CC83C200E01332 /* SeconViewController.swift in Sources */,
 				5F0F07F322CDE21600D019DD /* MyAPNViewController.swift in Sources */,
+				5F20269B22CEE028002E442B /* MyTabBar.swift in Sources */,
 				5F1672AD22CC7CBC00E01332 /* MyWebView.swift in Sources */,
 				5F0F07EF22CDC9DA00D019DD /* MyAPN.swift in Sources */,
 				5F1672AB22CC7CA800E01332 /* MyWebViewController.swift in Sources */,
